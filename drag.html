@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        :root,
+        body {
+            height: 100%
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            border: 1px solid black;
+            padding: 72px;
+            height: 300px;
+        }
+
+        .box {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .box:not(:last-child) {
+            margin-bottom: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box" draggable="true" data-key="0">mission 1</div>
+        <div class="box" draggable="true" data-key="1">mission 2</div>
+        <div class="box" draggable="true" data-key="2">mission 3</div>
+        <div class="box" draggable="true" data-key="3">mission 4</div>
+        <div class="box" draggable="true" data-key="4">mission 5</div>
+    </section>
+
+
+    <script>
+        let container = document.getElementsByTagName("section")[0];
+        let boxArr = document.getElementsByClassName("box");
+        let nowIndex, targetIndex;
+        // 利用事件委托
+        container.ondragstart = (e) => {
+            nowIndex = Array.from(container.children).indexOf(e.target)
+            e.dataTransfer.setData("text", nowIndex)
+        }
+        container.ondrag = (e) => {
+            e.target.style.opacity = '0.2'
+        }
+        container.ondragend = (e) => {
+            e.target.style.opacity = '1'
+        }
+
+        container.ondrop = (e) => {
+            let _from = e.dataTransfer.getData('text'),
+                _to = targetIndex;
+            if (_from - _to > 0) {
+                container.insertBefore(boxArr[_from], boxArr[_to])
+
+            } else if (_from - _to < 0) {
+                container.insertBefore(boxArr[_from], boxArr[_to].nextSibling)
+            }
+            Array.from(boxArr).forEach(item => {
+                item.style.transform = '';
+            })
+        }
+        container.ondragover = (e) => {
+            e.preventDefault();
+        }
+
+
+        container.ondragenter = (e) => {
+            if (Array.from(boxArr).includes(e.target)) {
+                targetIndex = Array.from(container.children).indexOf(e.target);
+                console.log(nowIndex, targetIndex)
+                if (nowIndex < targetIndex) {
+                    nowIndex = (nowIndex + 5) % 4;
+                    // boxArr[targetIndex]
+                    Array.from(boxArr).forEach((item, index) => {
+                        if (index <= targetIndex) {
+                            item.style.transform = `translateY(${-62}px)`
+                        }
+                    })
+                } else if (nowIndex > targetIndex) {
+                    nowIndex = (nowIndex + 5) % 6;
+                    Array.from(boxArr).forEach((item, index) => {
+                        if (index >= targetIndex) {
+                            item.style.transform = `translateY(${62}px)`
+                        }
+                    })
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
