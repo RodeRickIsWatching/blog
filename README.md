@@ -1,4 +1,7 @@
-# 文章推荐
+# 突发奇想才是探究的动力 
+
+
+### 文章推荐
 [vue源码](https://www.cnblogs.com/tiedaweishao/p/8933153.html)
 
 [如何编写高质量的函数](https://juejin.im/post/5c79f0046fb9a049ca380fc1)
@@ -11,7 +14,7 @@
 
 [ES6/7/8/9/10 新特性](https://juejin.im/post/5ca2e1935188254416288eb2?utm_source=weibo&utm_campaign=user#heading-41)
 
-# blog
+### blog
 关于框架：个人感觉框架是在能更方便开发的基础上提供不错的效率
 
 [react框架基础个人总结](https://github.com/RodeRickIsWatching/reactTodoList/issues)
@@ -22,7 +25,7 @@
 
 
 
-# 计划
+### 计划
 
 - [ ] 学会写注释
 - [ ] 吧vue源码完全读一遍，自己简单实现一下
