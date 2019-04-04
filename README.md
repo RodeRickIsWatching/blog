@@ -1,5 +1,6 @@
 # 突发奇想才是探究的动力 
 
+可以在Issues中查看文章，以后会整理到readme.md中
 
 ### 文章推荐
 [vue源码](https://www.cnblogs.com/tiedaweishao/p/8933153.html)
