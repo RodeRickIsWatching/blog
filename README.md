@@ -15,7 +15,7 @@
 [ES6/7/8/9/10 新特性](https://juejin.im/post/5ca2e1935188254416288eb2?utm_source=weibo&utm_campaign=user#heading-41)
 
 ### blog
-关于框架：个人感觉框架是在能更方便开发的基础上提供不错的效率
+关于框架：个人感觉框架是在复杂的项目中能更方便开发维护的基础上提供不错的效率
 
 [react框架基础个人总结](https://github.com/RodeRickIsWatching/reactTodoList/issues)
 
