@@ -13,7 +13,8 @@
 
 # blog
 关于框架：个人感觉框架是在能更方便开发的基础上提供不错的效率
-[react框架基础](https://github.com/RodeRickIsWatching/reactTodoList/issues)
+
+[react框架基础个人总结](https://github.com/RodeRickIsWatching/reactTodoList/issues)
 
 
 
