@@ -10,6 +10,17 @@
 [vue的骚操作](https://juejin.im/post/5c73554cf265da2de33f2a32)
 
 [ES6/7/8/9/10 新特性](https://juejin.im/post/5ca2e1935188254416288eb2?utm_source=weibo&utm_campaign=user#heading-41)
+
+# blog
+关于框架：个人感觉框架是在能更方便开发的基础上提供不错的效率
+[react框架基础](https://github.com/RodeRickIsWatching/reactTodoList/issues)
+
+
+
+
+
+
+
 # 计划
 
 - [ ] 学会写注释
